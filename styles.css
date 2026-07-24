@@ -1,0 +1,171 @@
+*, *::before, *::after { box-sizing: border-box}
+/* định nghĩa design tokens */
+:root{
+    --cm-primary: #0f766e;/*xanh thương hiệu*/
+    --cm-bg: #f8fafc;/*nền*/
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--cm-bg);
+    color: #1f2937;/*màu chữ xám đậm*/
+}
+.cm-header{
+    background-color: var(--cm-primary);
+    color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1 rem;
+}
+.cm-nav ul{
+    list-style: none; /*bỏ dấu chấm đàu dòng*/
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cm-nav ul li a{
+    color: #ffffff;
+    text-decoration: none;/*bỏ gạch chân*/
+}
+.cm-nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/*table 
+
+.cm-table{
+    width:100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: #ffffff;
+}
+
+.cm-table th, .cm-table td{
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.cm-table thead tr{
+    background-color: var(--cm-primary);
+    color: #ffffff;
+}
+
+.cm-table thead th{
+    font-weight: 600;
+}
+
+.cm-table figure{
+    margin: 0;
+}
+
+thêm zebra (hàng chẵn đổi màu)
+.cm-table tbody tr:nth-child(even){
+    background: #f1f5f7
+}
+thêm hover (di chuột đổi màu)
+.cm-table tbody tr:hover{
+    background: #ccfbf2
+}
+*/
+/* form + focuS*/
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+    width: 100%;
+    max-width: 24rem;
+    padding:0.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+/* hiệu ứng focus k dùng none chay*/
+input:focus,
+select:focus,
+textarea:focus{
+    outline: 2px solid var(--cm-primary);
+}
+/* nút submit*/
+button[type="submit"] {
+    background-color: var(--cm-primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* hoverr submit tối hơn*/
+button[type="submit"]:hover{
+    background-color: #013531;
+}
+.cm-inventory-total{
+    margin-top: 1 rem;
+    font-weight: bold;
+}
+
+
+/* card */
+.cm-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.cm-card{
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.cm-card figure{
+    margin: 0;
+}
+
+.cm-card img{
+    width:100%;
+    height:auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.cm-card-title{
+    margin: 0;
+    font-size: 1rem;
+}
+.cm-card-category{
+    margin:0;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+.cm-card-price{
+    margin:0;
+    font-weight: 600;
+    color: var(--cm-primary);
+
+}
+
+.cm-card:hover{
+    box-shadow: 0 4px 12px rgba(15,118,110,0.15);
+}
+
+.cm-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}

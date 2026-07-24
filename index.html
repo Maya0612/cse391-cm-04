@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset ="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusMart — Layout (Buoi 4)</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+    <!-- header + nav xếp ngang-->
+    <header class="cm-header">
+        <h1><div class="cm-logo">CampusMart</div></h1>
+        <nav class="cm-nav" aria-label="Menu chinh">
+            <ul>
+                <li><a href="#home">Trang chu</a></li>
+                <li><a href="#products">San pham</a></li>
+                <li><a href="#subscribe">Dang ky nhan tin</a></li>
+                <li><a href="#about">Gioi thieu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cm-container" data-testid="main-content">
+        <!--  ds sp dạng lưới-->
+        <section id="products" aria-labelledby="prod-heading">
+            <h2 id="prod-heading">Danh sach san pham</h2>
+            <!-- khối chứa lưới-->
+            <div class="cm-grid" data-testid="cm-product-table">
+                <!-- SP 1-->
+                 <article class="cm-card" data-sku="KB-01">
+                    <figure> 
+                            <img src="http://placehold.co/220x140" 
+                            alt="Ban phim co Keychron K2" 
+                            width="220" 
+                            height="140" />
+                            <figcaption>KB-01</figcaption>
+                        </figure>
+                        <h3 class="cm-card-title">Keychron K2</h3>
+                        <p class="cm-card-category">Ban phim</p>
+                        <p class="cm-card-price">1.890.000 đ</p>
+                </article>
+
+                <!-- SP 2-->
+                 <article class="cm-card" data-sku="KB-02">
+                    <figure> 
+                            <img src="http://placehold.co/220x140" 
+                            alt="Ban phim co Akko 3087" 
+                            width="220" 
+                            height="140" />
+                            <figcaption>KB-02</figcaption>
+                        </figure>
+                        <h3 class="cm-card-title">Akko 3087</h3>
+                        <p class="cm-card-category">Ban phim</p>
+                        <p class="cm-card-price">1.290.000 đ</p>
+                </article>
+                <!-- SP 3-->
+                 <article class="cm-card" data-sku="MS-01">
+                    <figure> 
+                            <img src="http://placehold.co/220x140" 
+                            alt="Chuot co Logitech G502" 
+                            width="220" 
+                            height="140" />
+                            <figcaption>MS-01</figcaption>
+                        </figure>
+                        <h3 class="cm-card-title">Logitech G502</h3>
+                        <p class="cm-card-category">Chuot</p>
+                        <p class="cm-card-price">290.000 đ</p>
+                </article>
+
+                <!-- SP 4-->
+                 <article class="cm-card" data-sku="MS-02">
+                    <figure> 
+                            <img src="http://placehold.co/220x140" 
+                            alt="Chuot Razer Viper" 
+                            width="220" 
+                            height="140" />
+                            <figcaption>MS-02</figcaption>
+                        </figure>
+                        <h3 class="cm-card-title">Razer Viper</h3>
+                        <p class="cm-card-category">Chuot</p>
+                        <p class="cm-card-price">990.000 đ</p>
+                </article>
+                <!-- SP 5-->
+                 <article class="cm-card" data-sku="KB-03">
+                    <figure> 
+                            <img src="http://placehold.co/220x140" 
+                            alt="Ban phim co Leopold FC660M" 
+                            width="220" 
+                            height="140" />
+                            <figcaption>KB-03</figcaption>
+                        </figure>
+                        <h3 class="cm-card-title">Leopold FC660M</h3>
+                        <p class="cm-card-category">Ban phim</p>
+                        <p class="cm-card-price">2.750.000 đ</p>
+                </article>
+                <!-- SP 6-->
+                 <article class="cm-card" data-sku="MS-03">
+                    <figure> 
+                            <img src="http://placehold.co/220x140" 
+                            alt="Chuot Xiaomi Silent" 
+                            width="220" 
+                            height="140" />
+                            <figcaption>MS-03</figcaption>
+                        </figure>
+                        <h3 class="cm-card-title">Xiaomi Silent</h3>
+                        <p class="cm-card-category">Chuot</p>
+                        <p class="cm-card-price">250.000 đ</p>
+                </article>
+                <!-- SP 7-->
+                 <article class="cm-card" data-sku="MN-01">
+                    <figure> 
+                            <img src="http://placehold.co/220x140" 
+                            alt="Man hinh Dell 24 inch " 
+                            width="220" 
+                            height="140" />
+                            <figcaption>MN-01</figcaption>
+                        </figure>
+                        <h3 class="cm-card-title">Dell 24 inch</h3>
+                        <p class="cm-card-category">Man hinh</p>
+                        <p class="cm-card-price">3.200.000 đ</p>
+                </article>
+                <!-- SP 8-->
+                 <article class="cm-card" data-sku="MN-02">
+                    <figure> 
+                            <img src="http://placehold.co/220x140" 
+                            alt="Man hinh LG UltraFine  " 
+                            width="220" 
+                            height="140" />
+                            <figcaption>MN-02</figcaption>
+                        </figure>
+                        <h3 class="cm-card-title">LG UltraFine</h3>
+                        <p class="cm-card-category">Man hinh</p>
+                        <p class="cm-card-price">8.500.000 đ</p>
+                </article>
+            </div>
+            <!-- tong kho-->
+             <div data-testid="cm-inventory-total" class="cm-inventory-total">
+                <p>Tong gia tri kho = 41380000</p>
+                <p>So san pham = 8</p>
+            </div>
+        </section>
+   
+        <!--Form đăng ký-->
+        <section id ="subscribe">
+            <h2>Dang ky nhan tin tu CampusMart</h2>
+
+            <form data-testid="cm-subscribe-form" action="#" method="get">
+                <fieldset>
+                    <legend>Dang ky nhan tin</legend>
+
+                    <p>
+                        <label for="sub-name">Ho ten</label>
+                        <input id="sub-name" name="name" type="text" required minlength="2" placeholder="Nguyen Van A" />
+                    </p>
+
+                    <p>
+                        <label for="sub-email">Email</label>
+                        <input id="sub-email" name="email" type="email" required placeholder="example@email.com" />
+                    </p>
+
+                    <p>
+                        <label for="sub-category">Danh muc quan tam</label>
+                        <select id="sub-category" name="category_id" required>
+                            <option value="">-- Chon danh muc --</option>
+                            <option value="1">Ban phim</option>
+                            <option value="2">Chuot</option>
+                            <option value="3">Man hinh</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <button type="submit">Dang ky</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="about" >
+            <h2>Gioi thieu ve CampusMart</h2>
+            <p>He thong quan ly san pham noi bo CampusMart UI - Mon hoc CSE391.</p>
+
+            <h3>Lien he voi chung toi</h3>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Gui gop y</legend>
+                    <p>
+                        <label for="contact-name">Ho ten</label>
+                        <input id="contact-name" name="contact-name" type="text" required/>
+
+                    </p>
+                    <p>
+                        <label for="contact-message">Noi dung</label>
+                        <textarea id="contact-message" name="contact-message" rows="4" required placeholder="Vui long nhap noi dung tai day.."></textarea>
+
+                    </p>
+                    <p>
+                        <button type="submit">Gui</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>@ 2026 CSE391 - CampusMart UI - Bai thuc hanh buoi 4</p>
+    </footer>
+    <!--CM_EXPECT product_count=8 card_count=8 inventory_value=41380000 layout=flex-grid-->
+</body>
+</html>
