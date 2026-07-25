@@ -3,14 +3,14 @@
 <head>
     <meta charset ="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CampusMart — Responsive (Buoi 5)</title>
+    <title>CampusMart — Layout (Buoi 4)</title>
     <link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
     <!-- header + nav xếp ngang-->
     <header class="cm-header">
-        <h1 class="cm-logo">CampusMart</h1>
+        <h1><div class="cm-logo">CampusMart</div></h1>
         <nav class="cm-nav" aria-label="Menu chinh">
             <ul>
                 <li><a href="#home">Trang chu</a></li>
@@ -21,18 +21,11 @@
         </nav>
     </header>
 
-    <main class="cm-main" id="main-content" data-testid="main-content">
-        <!-- HERO SECTION-->
-        <section class="cm-hero" id="hero">
-            <h2>Do choi cong nghe cho sinh vien</h2>
-            <a href="#products" class="cm-btn">Xem catalog</a>
-        </section>
-
+    <main class="cm-container" data-testid="main-content">
         <!--  ds sp dạng lưới-->
         <section id="products" aria-labelledby="prod-heading">
             <h2 id="prod-heading">Danh sach san pham</h2>
-
-            <!-- lưới card-->
+            <!-- khối chứa lưới-->
             <div class="cm-grid" data-testid="cm-product-table">
                 <!-- SP 1-->
                  <article class="cm-card" data-sku="KB-01">
@@ -141,91 +134,6 @@
                         <p class="cm-card-price">8.500.000 đ</p>
                 </article>
             </div>
-            
-            <!-- INVENTORY -->
-             <div class="table-wrap">
-                <table class="cm-table" data-testid="cm-inventory-table" border="1">
-                    <caption>Danh sach san pham CORE </caption>
-            <thead>
-                <tr>
-                    <th scope="col">SKU</th>
-                    <th scope="col">Ten</th>
-                    <th scope="col">Danh muc</th>
-                    <th scope="col">Gia</th>
-                    <th scope="col">So luong</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <!-- SP 1-->
-                <tr data-testid="cm-product-row" data-sku="KB-01">
-                    <td>KB-01</td>
-                    <td>Keychron K2</td>
-                    <td>Ban phim</td>
-                    <td>1890000</td>
-                    <td>3</td>
-                </tr>
-
-                <!-- SP 2-->
-                <tr data-testid="cm-product-row" data-sku="KB-02">
-                    <td>KB-02</td>
-                    <td>Akko 3087</td>
-                    <td>Ban phim</td>
-                    <td>1290000</td>
-                    <td>5</td>
-                </tr>
-
-                <!-- SP 3-->
-                <tr data-testid="cm-product-row" data-sku="MS-01">
-                    <td>MS-01</td>
-                    <td>Logitech M331</td>
-                    <td>Chuot</td>
-                    <td>290000</td>
-                    <td>10</td>
-                </tr>
-                <!-- SP 4-->
-                <tr data-testid="cm-product-row" data-sku="MS-02">
-                    <td>MS-02</td>
-                    <td>Razer Viper</td>
-                    <td>Chuot</td>
-                    <td>990000</td>
-                    <td>4</td>
-                </tr>
-                <!-- SP 5-->
-                <tr data-testid="cm-product-row" data-sku="KB-03">
-                    <td>KB-03</td>
-                    <td>Leopold FC660M</td>
-                    <td>Ban phim</td>
-                    <td>2750000</td>
-                    <td>2</td>
-                </tr>
-                <!-- SP 6-->
-                <tr data-testid="cm-product-row" data-sku="MS-03">
-                    <td>MS-03</td>
-                    <td>Xiaomi Silent</td>
-                    <td>Chuot</td>
-                    <td>250000</td>
-                    <td>8</td>
-                </tr>
-                <!-- SP 7-->
-                <tr data-testid="cm-product-row" data-sku="MN-01">
-                    <td>MN-01</td>
-                    <td>Dell 24 inch</td>
-                    <td>Man hinh</td>
-                    <td>3200000</td>
-                    <td>2</td>
-                </tr>
-                <!-- SP 8-->
-                <tr data-testid="cm-product-row" data-sku="MN-02">
-                    <td>MN-02</td>
-                    <td>LG UltraFine</td>
-                    <td>Man hinh</td>
-                    <td>8500000</td>
-                    <td>1</td>
-                </tr>
-            </tbody>
-                </table>
-             </div>
             <!-- tong kho-->
              <div data-testid="cm-inventory-total" class="cm-inventory-total">
                 <p>Tong gia tri kho = 41380000</p>
@@ -295,6 +203,8 @@
     </main>
 
     <footer>
-        <p>@ 2026 CSE391 - CampusMart UI - Bai thuc hanh buoi 5</p>
+        <p>@ 2026 CSE391 - CampusMart UI - Bai thuc hanh buoi 4</p>
     </footer>
-    <!--CM_EXPECT product_count=8 card_count=8 inventory_value=41380000 responsive=640,1024-->
+    <!--CM_EXPECT product_count=8 card_count=8 inventory_value=41380000 layout=flex-grid-->
+</body>
+</html>

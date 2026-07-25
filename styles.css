@@ -1,39 +1,33 @@
-*, *::before, *::after {
-     box-sizing: border-box
-    }
+*, *::before, *::after { box-sizing: border-box}
 /* định nghĩa design tokens */
 :root{
     --cm-primary: #0f766e;/*xanh thương hiệu*/
     --cm-bg: #f8fafc;/*nền*/
-    --cm-text: #1f2937;
-    --cm-border: #e2e8f9;
 }
 
 body {
     margin: 0;
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     background: var(--cm-bg);
-    color:var(--cm-text);/*màu chữ xám đậm*/
+    color: #1f2937;/*màu chữ xám đậm*/
 }
-/*mobile */
-.cm-header{ 
+.cm-header{
     background-color: var(--cm-primary);
     color: #ffffff;
     padding: 1rem;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 1 rem;
 }
 .cm-nav ul{
     list-style: none; /*bỏ dấu chấm đàu dòng*/
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: flex-column;
-    align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -46,6 +40,7 @@ body {
     text-decoration: underline;
 }
 
+/*table 
 
 .cm-table{
     width:100%;
@@ -73,15 +68,15 @@ body {
     margin: 0;
 }
 
-/*thêm zebra (hàng chẵn đổi màu)8*/
+thêm zebra (hàng chẵn đổi màu)
 .cm-table tbody tr:nth-child(even){
     background: #f1f5f7
 }
-/*thêm hover (di chuột đổi màu)*/
+thêm hover (di chuột đổi màu)
 .cm-table tbody tr:hover{
     background: #ccfbf2
 }
-
+*/
 /* form + focuS*/
 input[type="text"],
 input[type="email"],
@@ -115,7 +110,7 @@ button[type="submit"]:hover{
     background-color: #013531;
 }
 .cm-inventory-total{
-    margin-top: 1rem;
+    margin-top: 1 rem;
     font-weight: bold;
 }
 
@@ -123,7 +118,7 @@ button[type="submit"]:hover{
 /* card */
 .cm-grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1rem;
 }
 
@@ -174,95 +169,3 @@ button[type="submit"]:hover{
     margin: 0 auto;
     padding: 0 1.5rem;
 }
-/* tablet >=640px */
-@media (min-width: 640px){
-    /* header hang ngang, logo trai, nav phai*/
-    .cm-header{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    /* nav ngang*/
-    .cm-nav ul{
-        flex-direction: row;
-        gap: 1.5rem;
-    }
-    /*luoi sp thanh 2 cot*/
-    .cm-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-/* HERO ,BUTTON */
-.cm-hero{
-    background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
-    color: #ffffff;
-    padding: 2.5rem 1rem;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:1rem;
-}
-.cm-hero h2{
-    margin: 0;
-    font-size: 1.75rem;
-    font-weight:700;
-}
-.cm-btn{
-    display: inline-block;
-    background: #ffffff;
-    color: #0f766e;
-    padding: 0.6rem 1.5rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-}
-.cm-btn:hover{
-    background-color: #f0fdfa;
-}
-/*table wrap - cuon ngang mobile*/
-.table-wrap{
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-bottom: 2rem;
-}
-.cm-table{
-    width: 100%;
-    min-width: 640px;
-    border-collapse: collapse;
-    background-color: #ffffffff;
-}
-/*destop breakpoint >=1024px*/
-@media(min-width: 1024px){
-    .cm-grid{
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .cm-main{
-        width: 100%;
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 1rem;
-    }
-}
-/*
-@media(max-width: 1023px){
-    .cm-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media(max-width: 639px){
-    .cm-grid{
-        display:grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-bottom: 2rem;
-    }
-    .cm-header{
-        flex-direction: column;
-        align-items: center;
-    }
-}*/
